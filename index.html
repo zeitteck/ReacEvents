@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <img src="./imagen.jpg" id="imagenId" onclick="hanFetClick('imagenId')" />
+    <button id="botonId" onclick="hanFetClick('botonId')">Click me</button>
+</div>
+
+<ul id="listaTareas">
+    <li>Tarea 1</li>
+    <li>Tarea 2</li>
+    <li>Tarea 3</li>
+  </ul>
+
+  <button id="addTarea" onclick="addTarea()">Añadir tarea</button>
+
+
+<script>
+function hanFetClick(id) {
+  if (id === 'imagenId') {
+    window.alert('Hiciste clic en la imagen');
+  } else if (id === 'botonId') {
+    window.alert('Hiciste clic en el botón');
+  }
+}
+
+function addTarea() {
+  var listaNueva = document.getElementById("listaTareas");
+  var nuevaTarea = document.createElement("li");
+  nuevaTarea.innerHTML = "Nueva tarea";
+  listaNueva.appendChild(nuevaTarea);
+}
+</script>
+
+   
+</body>
+</html>
